@@ -1,0 +1,642 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20211.21.0420.1112                               -->
+<workbook original-version='18.1' source-build='2021.1.1 (20211.21.0420.1112)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='accidents_final' inline='true' name='federated.00sr3wl1g798y911iw9w41n33t2w' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='accidents_final' name='textscan.0ayqs1u0m3r59r14lgn0k0c3rea5'>
+            <connection class='textscan' directory='C:/Users/hecto/OneDrive/Documentos/Apuntes2020_21/Quadrimestre2_Master/Visualització de dades/Pràctica' filename='accidents_final.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0ayqs1u0m3r59r14lgn0k0c3rea5' name='accidents_final.csv' table='[accidents_final#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='es_ES' separator=',' text-qualifier=''>
+            <column datatype='integer' name='Severity' ordinal='0' />
+            <column datatype='datetime' name='Start_Time' ordinal='1' />
+            <column datatype='datetime' name='End_Time' ordinal='2' />
+            <column datatype='string' name='Start_Lat' ordinal='3' />
+            <column datatype='string' name='Start_Lng' ordinal='4' />
+            <column datatype='string' name='Distance.mi.' ordinal='5' />
+            <column datatype='string' name='State' ordinal='6' />
+            <column datatype='string' name='Temperature.F.' ordinal='7' />
+            <column datatype='integer' name='Wind_Chill.F.' ordinal='8' />
+            <column datatype='integer' name='Humidity...' ordinal='9' />
+            <column datatype='string' name='Pressure.in.' ordinal='10' />
+            <column datatype='integer' name='Visibility.mi.' ordinal='11' />
+            <column datatype='string' name='Wind_Speed.mph.' ordinal='12' />
+            <column datatype='string' name='Precipitation.in.' ordinal='13' />
+            <column datatype='string' name='Weather_Condition' ordinal='14' />
+            <column datatype='boolean' name='Amenity' ordinal='15' />
+            <column datatype='boolean' name='Bump' ordinal='16' />
+            <column datatype='boolean' name='Crossing' ordinal='17' />
+            <column datatype='boolean' name='Give_Way' ordinal='18' />
+            <column datatype='boolean' name='Junction' ordinal='19' />
+            <column datatype='boolean' name='No_Exit' ordinal='20' />
+            <column datatype='boolean' name='Railway' ordinal='21' />
+            <column datatype='boolean' name='Roundabout' ordinal='22' />
+            <column datatype='boolean' name='Station' ordinal='23' />
+            <column datatype='boolean' name='Stop' ordinal='24' />
+            <column datatype='boolean' name='Traffic_Calming' ordinal='25' />
+            <column datatype='boolean' name='Traffic_Signal' ordinal='26' />
+            <column datatype='boolean' name='Turning_Loop' ordinal='27' />
+            <column datatype='string' name='Sunrise_Sunset' ordinal='28' />
+            <column datatype='integer' name='population' ordinal='29' />
+            <column datatype='string' name='state_trim' ordinal='30' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0ayqs1u0m3r59r14lgn0k0c3rea5' name='accidents_final.csv' table='[accidents_final#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='es_ES' separator=',' text-qualifier=''>
+            <column datatype='integer' name='Severity' ordinal='0' />
+            <column datatype='datetime' name='Start_Time' ordinal='1' />
+            <column datatype='datetime' name='End_Time' ordinal='2' />
+            <column datatype='string' name='Start_Lat' ordinal='3' />
+            <column datatype='string' name='Start_Lng' ordinal='4' />
+            <column datatype='string' name='Distance.mi.' ordinal='5' />
+            <column datatype='string' name='State' ordinal='6' />
+            <column datatype='string' name='Temperature.F.' ordinal='7' />
+            <column datatype='integer' name='Wind_Chill.F.' ordinal='8' />
+            <column datatype='integer' name='Humidity...' ordinal='9' />
+            <column datatype='string' name='Pressure.in.' ordinal='10' />
+            <column datatype='integer' name='Visibility.mi.' ordinal='11' />
+            <column datatype='string' name='Wind_Speed.mph.' ordinal='12' />
+            <column datatype='string' name='Precipitation.in.' ordinal='13' />
+            <column datatype='string' name='Weather_Condition' ordinal='14' />
+            <column datatype='boolean' name='Amenity' ordinal='15' />
+            <column datatype='boolean' name='Bump' ordinal='16' />
+            <column datatype='boolean' name='Crossing' ordinal='17' />
+            <column datatype='boolean' name='Give_Way' ordinal='18' />
+            <column datatype='boolean' name='Junction' ordinal='19' />
+            <column datatype='boolean' name='No_Exit' ordinal='20' />
+            <column datatype='boolean' name='Railway' ordinal='21' />
+            <column datatype='boolean' name='Roundabout' ordinal='22' />
+            <column datatype='boolean' name='Station' ordinal='23' />
+            <column datatype='boolean' name='Stop' ordinal='24' />
+            <column datatype='boolean' name='Traffic_Calming' ordinal='25' />
+            <column datatype='boolean' name='Traffic_Signal' ordinal='26' />
+            <column datatype='boolean' name='Turning_Loop' ordinal='27' />
+            <column datatype='string' name='Sunrise_Sunset' ordinal='28' />
+            <column datatype='integer' name='population' ordinal='29' />
+            <column datatype='string' name='state_trim' ordinal='30' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;es_ES&quot;</attribute>
+              <attribute datatype='string' name='quote-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Severity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Severity]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Severity</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Start_Time</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Start_Time]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Start_Time</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>End_Time</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[End_Time]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>End_Time</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Start_Lat</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Start_Lat]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Start_Lat</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Start_Lng</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Start_Lng]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Start_Lng</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Distance.mi.</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Distance.mi.]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Distance.mi.</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Temperature.F.</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Temperature.F.]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Temperature.F.</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Wind_Chill.F.</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Wind_Chill.F.]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Wind_Chill.F.</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Humidity...</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Humidity...]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Humidity...</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pressure.in.</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pressure.in.]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Pressure.in.</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Visibility.mi.</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Visibility.mi.]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Visibility.mi.</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Wind_Speed.mph.</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Wind_Speed.mph.]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Wind_Speed.mph.</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Precipitation.in.</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Precipitation.in.]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Precipitation.in.</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Weather_Condition</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Weather_Condition]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Weather_Condition</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Amenity</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Amenity]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Amenity</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bump</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Bump]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Bump</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Crossing</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Crossing]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Crossing</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Give_Way</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Give_Way]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Give_Way</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Junction</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Junction]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Junction</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>No_Exit</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[No_Exit]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>No_Exit</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Railway</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Railway]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Railway</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Roundabout</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Roundabout]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Roundabout</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Station</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Station]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Station</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stop</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Stop]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Stop</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Traffic_Calming</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Traffic_Calming]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Traffic_Calming</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Traffic_Signal</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Traffic_Signal]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Traffic_Signal</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Turning_Loop</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Turning_Loop]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Turning_Loop</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sunrise_Sunset</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sunrise_Sunset]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>Sunrise_Sunset</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>population</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[population]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>population</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>state_trim</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[state_trim]</local-name>
+            <parent-name>[accidents_final.csv]</parent-name>
+            <remote-alias>state_trim</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[accidents_final.csv_22610C8931404821AA632EA0E55490F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='accidents_final.csv' datatype='table' name='[__tableau_internal_object_id__].[accidents_final.csv_22610C8931404821AA632EA0E55490F9]' role='measure' type='quantitative' />
+      <column datatype='string' name='[state_trim]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;España&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='accidents_final.csv' id='accidents_final.csv_22610C8931404821AA632EA0E55490F9'>
+            <properties context=''>
+              <relation connection='textscan.0ayqs1u0m3r59r14lgn0k0c3rea5' name='accidents_final.csv' table='[accidents_final#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='es_ES' separator=',' text-qualifier=''>
+                  <column datatype='integer' name='Severity' ordinal='0' />
+                  <column datatype='datetime' name='Start_Time' ordinal='1' />
+                  <column datatype='datetime' name='End_Time' ordinal='2' />
+                  <column datatype='string' name='Start_Lat' ordinal='3' />
+                  <column datatype='string' name='Start_Lng' ordinal='4' />
+                  <column datatype='string' name='Distance.mi.' ordinal='5' />
+                  <column datatype='string' name='State' ordinal='6' />
+                  <column datatype='string' name='Temperature.F.' ordinal='7' />
+                  <column datatype='integer' name='Wind_Chill.F.' ordinal='8' />
+                  <column datatype='integer' name='Humidity...' ordinal='9' />
+                  <column datatype='string' name='Pressure.in.' ordinal='10' />
+                  <column datatype='integer' name='Visibility.mi.' ordinal='11' />
+                  <column datatype='string' name='Wind_Speed.mph.' ordinal='12' />
+                  <column datatype='string' name='Precipitation.in.' ordinal='13' />
+                  <column datatype='string' name='Weather_Condition' ordinal='14' />
+                  <column datatype='boolean' name='Amenity' ordinal='15' />
+                  <column datatype='boolean' name='Bump' ordinal='16' />
+                  <column datatype='boolean' name='Crossing' ordinal='17' />
+                  <column datatype='boolean' name='Give_Way' ordinal='18' />
+                  <column datatype='boolean' name='Junction' ordinal='19' />
+                  <column datatype='boolean' name='No_Exit' ordinal='20' />
+                  <column datatype='boolean' name='Railway' ordinal='21' />
+                  <column datatype='boolean' name='Roundabout' ordinal='22' />
+                  <column datatype='boolean' name='Station' ordinal='23' />
+                  <column datatype='boolean' name='Stop' ordinal='24' />
+                  <column datatype='boolean' name='Traffic_Calming' ordinal='25' />
+                  <column datatype='boolean' name='Traffic_Signal' ordinal='26' />
+                  <column datatype='boolean' name='Turning_Loop' ordinal='27' />
+                  <column datatype='string' name='Sunrise_Sunset' ordinal='28' />
+                  <column datatype='integer' name='population' ordinal='29' />
+                  <column datatype='string' name='state_trim' ordinal='30' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Hoja 1'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{3D7ED74D-0756-4401-B4A1-8F0DC093340B}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Hoja 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7A9450F4-C742-40D9-A9F0-B97185FA2565}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Hoja 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
