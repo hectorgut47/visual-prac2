@@ -1,0 +1,165 @@
+---
+title: "Estudi dels accidents de trànsit als Estats Units d'Amèrica"
+subtitle: "Visualització de dades - Pràctica 2"
+author: "Héctor Gutiérrez Muñoz"
+date: "9 de juny, 2021"
+output:
+  pdf_document:
+    toc: yes
+    number_sections: true
+toc-title: "Sumari"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r load_libraries, include=FALSE}
+
+library(tidyverse)
+library(kableExtra)
+library(dplyr)
+library(readxl)
+library(stringr)
+
+```
+
+# Càrrega del fitxer
+
+En primer lloc, carreguem els fitxers CSV. El dataset principal es pot trobar a 
+https://www.kaggle.com/sobhanmoosavi/us-accidents. L'altre, de la població als Estats
+Units està disponible a https://www2.census.gov/programs-surveys/popest/tables/2010-2019/state/totals/nst-est2019-01.xlsx.
+
+```{r,eval=TRUE,echo=TRUE}
+
+accidents_data <- read.csv("US_Accidents_Dec20_Updated.csv")
+
+population_data <- data.frame(read_excel(
+  path = "nst-est2019-01.xlsx",
+  range = c("A10:M60"),
+  col_names = FALSE))
+
+# Només ens interessen dues columnes d'aquest dataset
+
+population_data <- population_data[,c(1,13)]
+colnames(population_data) <- c("state", "population")
+
+```
+
+
+# Primera exploració
+
+Veiem uns exemples del primer dataset:
+
+```{r,eval=TRUE,echo=TRUE}
+
+kable(
+  t(head(accidents_data,2)),
+  format = 'latex', 
+  booktabs = TRUE
+) %>%
+ kableExtra::kable_styling(latex_options = c("scale_down","hold_position"))
+
+```
+
+També del segon:
+
+```{r,eval=TRUE,echo=TRUE}
+
+kable(
+  head(population_data),
+  format = 'latex', 
+  booktabs = TRUE
+) %>%
+ kableExtra::kable_styling(latex_options = c("hold_position"))
+
+```
+
+# Preprocessament
+
+L'únic preprocessament que cal fer en aquest cas és fer el join dels dos datsets
+pel estat. Per fer-lo, primer s'han de posar les dues variables en el mateix format.
+
+```{r,eval=TRUE,echo=TRUE}
+
+# Traiem el punt que hi ha a l'inici dels noms
+
+population_data$state_trim <- substring(population_data$state, 2)
+
+# Traiem la dada del Districte de Columbia, que no és a les variables state.abb
+# i state.name de R
+
+pop_DC <- population_data[population_data$state_trim == "District of Columbia", 2]
+
+population_data <- 
+  population_data[-which(population_data$state_trim == "District of Columbia"),]
+
+# Fem la conversió a abreviatures
+
+population_data$state_abb <- state.abb[which(state.name == population_data$state_trim)]
+
+# Tornem a introduir la dada del Districte de Columbia
+
+population_data <- rbind(population_data, c("", pop_DC, "District of Columbia", "DC"))
+
+```
+
+Un cop fet això, podem fer el join:
+
+```{r,eval=TRUE,echo=TRUE}
+
+merged_df <- merge(accidents_data, 
+                   population_data,
+                   by.x = "State",
+                   by.y = "state_abb")
+
+head(merged_df)
+
+```
+
+Es comprova que el join s'ha fet correctament i que el nombre de registres és el
+mateix que al dataset original:
+
+```{r,eval=TRUE,echo=TRUE}
+
+dim(accidents_data)[1] == dim(merged_df)[1]
+
+```
+
+Com que el dataset és força gran, en treurem les columnes que no es faran servir
+a la visualització per intentar millorar la performance.
+
+```{r,eval=TRUE,echo=TRUE}
+
+merged_df <- merged_df[, c(
+  "Severity", "Start_Time", "End_Time", "Start_Lat", "Start_Lng",
+  "Distance.mi.", "State", "Temperature.F.", "Wind_Chill.F.", "Humidity...",
+  "Pressure.in.", "Visibility.mi.", "Wind_Speed.mph.", "Precipitation.in.",
+  "Weather_Condition", "Amenity", "Bump", "Crossing", "Give_Way", "Junction",
+  "No_Exit", "Railway", "Roundabout", "Station", "Stop", "Traffic_Calming",
+  "Traffic_Signal", "Turning_Loop", "Sunrise_Sunset", "population", "state_trim"
+)]
+
+```
+
+Les dades de l'any 2016 no són força acurades, hi ha molts menys accidents que la
+resta d'anys. Per no desvirtuar l'anàlisi, traiem aquests registres del dataset. 
+
+```{r,eval=TRUE,echo=TRUE}
+
+merged_df <- merged_df[substring(merged_df$Start_Time,1,4) != "2016", ]
+
+```
+
+# Fitxer de sortida
+
+Finalment, les dades preprocessades es desaran a un fitxer.
+
+```{r,eval=TRUE,echo=TRUE}
+
+write.csv2(merged_df, 
+          "accidents_final.csv", 
+          row.names = FALSE, 
+          na = "")
+
+```
